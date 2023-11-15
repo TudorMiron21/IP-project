@@ -7,19 +7,13 @@ import lombok.Data;
 @Data
 @Entity
 @Table
-public class Student{
+public class Equipment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private String name;
 
-    @OneToOne(mappedBy = "student")
-    private User user;
-
-
-    @ManyToOne
-    @JoinColumn(name ="id_studygroup")
-    private StudyGroup studyGroup;
 
 }

@@ -12,46 +12,48 @@ import java.util.stream.Collectors;
 import static java.util.Set.of;
 
 public enum Roles {
-    USER(Set.of()),
+    STUDENT(Set.of()),
 
-    PAYING_USER(
+    PROFESSOR(
             of(
-                    Permissions.PAYING_USER_READ,
-                    Permissions.PAYING_USER_WRITE,
-                    Permissions.PAYING_USER_UPDATE,
-                    Permissions.PAYING_USER_DELETE
+                    Permissions.PROFESSOR_READ,
+                    Permissions.PROFESSOR_WRITE,
+                    Permissions.PROFESSOR_UPDATE,
+                    Permissions.PROFESSOR_DELETE
             )
     ),
 
-    COACH(
+    SECRETARY(
             of(
-                    Permissions.PAYING_USER_READ,
-                    Permissions.PAYING_USER_WRITE,
-                    Permissions.PAYING_USER_UPDATE,
-                    Permissions.PAYING_USER_DELETE,
-                    Permissions.COACH_READ,
-                    Permissions.COACH_WRITE,
-                    Permissions.COACH_UPDATE,
-                    Permissions.COACH_DELETE
+                    Permissions.PROFESSOR_READ,
+                    Permissions.PROFESSOR_WRITE,
+                    Permissions.PROFESSOR_UPDATE,
+                    Permissions.PROFESSOR_DELETE,
+                    Permissions.SECRETARY_READ,
+                    Permissions.SECRETARY_WRITE,
+                    Permissions.SECRETARY_UPDATE,
+                    Permissions.SECRETARY_DELETE
             )
     ),
 
     ADMIN(
             of(
-                    Permissions.PAYING_USER_READ,
-                    Permissions.PAYING_USER_WRITE,
-                    Permissions.PAYING_USER_UPDATE,
-                    Permissions.PAYING_USER_DELETE,
-                    Permissions.COACH_READ,
-                    Permissions.COACH_WRITE,
-                    Permissions.COACH_UPDATE,
-                    Permissions.COACH_DELETE,
+                    Permissions.PROFESSOR_READ,
+                    Permissions.PROFESSOR_WRITE,
+                    Permissions.PROFESSOR_UPDATE,
+                    Permissions.PROFESSOR_DELETE,
+                    Permissions.SECRETARY_READ,
+                    Permissions.SECRETARY_WRITE,
+                    Permissions.SECRETARY_UPDATE,
+                    Permissions.SECRETARY_DELETE,
                     Permissions.ADMIN_READ,
                     Permissions.ADMIN_WRITE,
                     Permissions.ADMIN_UPDATE,
                     Permissions.ADMIN_DELETE
             )
-    );
+    )
+
+    ;
 
     @Getter
     private final Set<Permissions> permissions;

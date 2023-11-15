@@ -4,14 +4,20 @@ import lombok.Getter;
 
 @Getter
 public enum Permissions {
-    PAYING_USER_READ("payingUser:read"),
-    PAYING_USER_WRITE("payingUser:write"),
-    PAYING_USER_UPDATE("payingUser:update"),
-    PAYING_USER_DELETE("payingUser:delete"),
-    COACH_READ("coach:read"),
-    COACH_WRITE("coach:write"),
-    COACH_UPDATE("coach:update"),
-    COACH_DELETE("coach:delete"),
+
+
+    PROFESSOR_READ("professor:read"),
+    PROFESSOR_WRITE("professor:write"),
+    PROFESSOR_UPDATE("professor:update"),
+    PROFESSOR_DELETE("professor:delete"),
+
+
+    SECRETARY_READ("secretary:read"),
+    SECRETARY_WRITE("secretary:write"),
+    SECRETARY_UPDATE("secretary:update"),
+    SECRETARY_DELETE("secretary:delete"),
+
+
     ADMIN_READ("admin:read"),
     ADMIN_WRITE("admin:write"),
     ADMIN_UPDATE("admin:update"),
